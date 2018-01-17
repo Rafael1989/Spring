@@ -30,14 +30,14 @@ public class ProdutosController {
 	}
 
 	@RequestMapping("/form")
-	public ModelAndView form() {
+	public ModelAndView form(Produto produto) {
 		return new ModelAndView("produtos/form").addObject("tipos", TipoPreco.values());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView adiciona(@Valid Produto produto, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 		if(bindingResult.hasErrors()) {
-			return form();
+			return form(produto);
 		}
 		
 		produtoDao.adiciona(produto);
