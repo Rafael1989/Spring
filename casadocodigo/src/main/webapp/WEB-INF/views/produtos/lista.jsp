@@ -26,5 +26,8 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<div>
+		${mensagem}
+	</div>
 </body>
 </html>
