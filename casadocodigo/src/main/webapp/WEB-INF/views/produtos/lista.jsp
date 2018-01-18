@@ -9,6 +9,9 @@
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
 </head>
 <body>
+	<div>
+		${sucesso}
+	</div>
 	<table>
 		<thead>
 			<tr>

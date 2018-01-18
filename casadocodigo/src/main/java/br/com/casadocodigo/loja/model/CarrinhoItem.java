@@ -12,6 +12,12 @@ public class CarrinhoItem {
 		this.produto = produto;
 	}
 	
+	public CarrinhoItem(Produto produto, TipoPreco tipoPreco) {
+		this.produto = produto;
+		// TODO Auto-generated constructor stub
+		this.tipoPreco = tipoPreco;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
