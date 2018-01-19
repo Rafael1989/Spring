@@ -32,9 +32,16 @@
 				<li><a href="${s:mvcUrl('PC#lista').build()}">Lista de Produtos</a></li>
 				<li><a href="${s:mvcUrl('PC#form').build()}">Cadastro de Produtos</a></li>
 			</ul>
+			<security:authorize access="isAuthenticated()">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><security:authentication property="principal" var="usuario"/>Usuário: ${usuario.username}</a></li>
+				<li>
+					<a href="#">
+						<security:authentication property="principal.username" var="usuario"/>
+						Usuário: ${usuario.username}
+					</a>
+				</li>
 			</ul>
+			</security:authorize>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>
