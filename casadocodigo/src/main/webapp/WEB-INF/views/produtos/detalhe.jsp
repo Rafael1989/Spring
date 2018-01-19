@@ -5,7 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<c:url value="/" var="contextPath" />
+<c:url value="/resources/css" var="cssPath" />
+<link rel="stylesheet" href="${cssPath}/bootstrap.min.css" />
+<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
 	  <meta charset="utf-8"/>
 		  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -15,27 +17,27 @@
 		<link href="https://plus.googlecom/108540024862647200608"
 			rel="publisher"/>
 		<title>${produto.titulo} - Casa do Código</title>
-		<link href="<c:url value="/resources/css/cssbase-min.css"/>"
+		<link href="<c:url value="${cssPath}/cssbase-min.css"/>"
 			rel="stylesheet" type="text/css" media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
 			rel='stylesheet'/>
-		<link href="<c:url value="/resources/css/fonts.css"/>"
+		<link href="${cssPath}/fonts.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/fontello-ie7.css"/>"
+		<link href="${cssPath}/fontello-ie7.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/fontello-embedded.css"/>"
+		<link href="${cssPath}/fontello-embedded.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/fontello.css"/>"
+		<link href="${cssPath}/fontello.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/style.css"/>"
+		<link href="${cssPath}/style.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/layout-colors.css"/>"
+		<link href="${cssPath}/layout-colors.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/responsive-style.css"/>"
+		<link href="${cssPath}/responsive-style.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="<c:url value="/resources/css/guia-do-programador-style.css"/>"
+		<link href="${cssPath}/guia-do-programador-style.css"
 			rel="stylesheet" type="text/css"  media="all"  />
-	    <link href="<c:url value="/resources/css/produtos.css"/>"
+	    <link href="${cssPath}/produtos.css"
 	    	rel="stylesheet" type="text/css"  media="all"  />
 		<link rel="canonical" href="http://www.casadocodigo.com.br/" />	
 </head>

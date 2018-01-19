@@ -5,7 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<c:url value="/" var="contextPath" />
+	<c:url value="/resources/css" var="cssPath" />
+	<link rel="stylesheet" href="${cssPath}/bootstrap.min.css" />
+	<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
 	  <meta charset="utf-8"/>
 		  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -16,27 +18,27 @@
 			rel="publisher"/>
 		<title>Livros de Java, SOA, Android, iPhone, Ruby on Rails e
 			muito mais - Casa do Código</title>
-		<link href="${contextPath}resources/css/cssbase-min.css"
+		<link href="${cssPath}/cssbase-min.css"
 			rel="stylesheet" type="text/css" media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
 			rel='stylesheet'/>
-		<link href="${contextPath}resources/css/fonts.css"
+		<link href="${cssPath}/fonts.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/fontello-ie7.css"
+		<link href="${cssPath}/fontello-ie7.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/fontello-embedded.css"
+		<link href="${cssPath}/fontello-embedded.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/fontello.css"
+		<link href="${cssPath}/fontello.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/style.css"
+		<link href="${cssPath}/style.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/layout-colors.css"
+		<link href="${cssPath}/layout-colors.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/responsive-style.css"
+		<link href="${cssPath}/responsive-style.css"
 			rel="stylesheet" type="text/css" media="all" />
-		<link href="${contextPath}resources/css/guia-do-programador-style.css" 
+		<link href="${cssPath}/guia-do-programador-style.css" 
 			rel="stylesheet" type="text/css"  media="all"  />
-	    <link href="${contextPath}resources/css/produtos.css" 
+	    <link href="${cssPath}/produtos.css" 
 	    	rel="stylesheet" type="text/css"  media="all"  />
 		<link rel="canonical" href="http://www.casadocodigo.com.br/" />	
 </head>
