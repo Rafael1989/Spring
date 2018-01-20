@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.web.context.WebApplicationContext;
 
 @Component
@@ -50,7 +49,7 @@ public class CarrinhoCompras {
 	public void remove(Integer produtoId, TipoPreco tipoPreco) {
 		Produto produto = new Produto();
 		produto.setId(produtoId);
-		itens.remove(new CarrinhoItem(produto, tipoPreco));
+		itens.remove(new CarrinhoItem(produto,tipoPreco));
 		
 	}
 

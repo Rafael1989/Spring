@@ -7,17 +7,11 @@ public class CarrinhoItem {
 	private TipoPreco tipoPreco;
 	private Produto produto;
 
-	public CarrinhoItem(TipoPreco tipoPreco, Produto produto) {
-		this.tipoPreco = tipoPreco;
+	public CarrinhoItem(Produto produto,TipoPreco tipoPreco) {
 		this.produto = produto;
+		this.tipoPreco = tipoPreco;
 	}
 	
-	public CarrinhoItem(Produto produto, TipoPreco tipoPreco) {
-		this.produto = produto;
-		// TODO Auto-generated constructor stub
-		this.tipoPreco = tipoPreco;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -29,22 +23,30 @@ public class CarrinhoItem {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (!(obj instanceof CarrinhoItem)) {
 			return false;
+		}
 		CarrinhoItem other = (CarrinhoItem) obj;
 		if (produto == null) {
-			if (other.produto != null)
+			if (other.produto != null) {
 				return false;
-		} else if (!produto.equals(other.produto))
+			}
+		} else if (!produto.equals(other.produto)) {
 			return false;
-		if (tipoPreco != other.tipoPreco)
+		}
+		if (tipoPreco != other.tipoPreco) {
 			return false;
+		}
 		return true;
 	}
+
+
 
 	public TipoPreco getTipoPreco() {
 		return tipoPreco;
