@@ -2,7 +2,6 @@ package br.com.casadocodigo.loja.controller;
 
 import java.util.concurrent.Callable;
 
-import org.apache.catalina.ha.backend.Sender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.mail.MailSender;
@@ -42,8 +41,8 @@ public class PagamentoController {
 				String url = "http://book-payment.herokuapp.com/payment";
 				restTemplate.postForObject(url, new DadosPagamento(carrinho.getTotal()), String.class);
 				redirectAttributes.addFlashAttribute("sucesso", "Pagamento realizado com sucesso");
-				enviaEmailCompraProduto(usuario);
-				return new ModelAndView("redirect:produtos");
+				//enviaEmailCompraProduto(usuario);
+				return new ModelAndView("redirect:/produtos");
 			}catch(HttpClientErrorException e) {
 				e.printStackTrace();
 				redirectAttributes.addFlashAttribute("sucesso", "Valor maior que o permitido");

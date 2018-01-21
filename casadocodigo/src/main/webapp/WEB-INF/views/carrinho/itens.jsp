@@ -52,7 +52,7 @@
 									R$ 59,90
 								</td>
 								<td class="remove-item">
-									<form:form servletRelativeAction="/casadocodigo/carrinho/remove" method="post">
+									<form:form servletRelativeAction="/carrinho/remove" method="post">
 										<input type="hidden" name="produtoId" value="${item.produto.id}"/>
 										<input type="hidden" name="tipoPreco" value="${item.tipoPreco}"/>
 										<input type="image" src="${imagePath}/excluir.png" alt="Excluir" title="Excluir" />
@@ -64,7 +64,7 @@
 				<tfoot>
 					<tr>
 						<td colspan="3">
-							<form:form servletRelativeAction="/casadocodigo/pagamento/finaliza" method="post">
+							<form:form servletRelativeAction="/pagamento/finaliza" method="post">
 								<input type="submit" class="checkout" name="checkout"
 									value="Finalizar compra" />
 							</form:form>

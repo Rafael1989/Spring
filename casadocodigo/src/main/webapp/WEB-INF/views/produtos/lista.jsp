@@ -36,8 +36,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a href="#">
-						<security:authentication property="principal.username" var="usuario"/>
-						Usuário: ${usuario.username}
+						<security:authentication property="principal.username"/>
 					</a>
 				</li>
 			</ul>

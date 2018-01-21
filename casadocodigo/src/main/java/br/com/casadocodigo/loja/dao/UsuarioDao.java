@@ -1,6 +1,7 @@
 package br.com.casadocodigo.loja.dao;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,5 +26,18 @@ public class UsuarioDao implements UserDetailsService{
 		}
 		
 		return usuario;
+	}
+	
+	public Usuario getUsuario(Usuario usuario) {
+		try {
+			return em.createQuery("select u from Usuario u where u.email = :email", Usuario.class)
+					.setParameter("email", usuario.getEmail()).getSingleResult();
+		}catch(NoResultException e) {
+			return null;
+		}
+	}
+	
+	public void adiciona(Usuario usuario) {
+		em.persist(usuario);
 	}
 }
